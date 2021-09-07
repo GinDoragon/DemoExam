@@ -7,8 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView>
-            
-        </ListView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Resources/logo.png" HorizontalAlignment="Right"/>
+        <Grid Background="#43DCFE" Panel.ZIndex="-1"></Grid>
+        <TextBlock Text="Агенты" Style="{StaticResource Title}"/>
+        <Frame Grid.Row="1" Name="MainFrame"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btnShowAgents" Height="36" Width="200" Margin="10" Content="Агенты" Click="btnShowAgents_Click"/>
+            <Button x:Name="btnExit" Height="36" Width="200" Margin="10" Content="Выйти" Click="btnExit_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

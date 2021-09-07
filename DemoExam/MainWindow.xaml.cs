@@ -23,6 +23,22 @@ namespace DemoExam
         public MainWindow()
         {
             InitializeComponent();
+            HostWindowInFrame(MainFrame, new AllAgents());
+        }
+
+        private void btnShowAgents_Click(object sender, RoutedEventArgs e)
+        {
+        }
+        public void HostWindowInFrame(Frame fraContainer, Window win)
+        {
+            object tmp = win.Content;
+            win.Content = null;
+            fraContainer.Content = new ContentControl() { Content = tmp };
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

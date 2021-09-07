@@ -1,0 +1,41 @@
+﻿<Window x:Class="DemoExam.AllAgents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoExam"
+        mc:Ignorable="d"
+        Title="AllAgents" Height="262" Width="792">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="txtSearch" Width="700" Height="25" Margin="5"/>
+                <ListBox x:Name="ListAgents" Background="Transparent" Width="650" BorderBrush="Transparent">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBoxItem BorderBrush="Black" Background="White" Width="600">
+                                <ListBoxItem.Resources>
+                                    <Style TargetType="ListBoxItem" x:Key="lbITomato"/>
+                                </ListBoxItem.Resources>
+                                <StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Name="imgAgent" Visibility="Hidden" Text="{Binding Logo, StringFormat=..{0}}"/>
+                                            <Image Source="{Binding Text, ElementName=imgAgent}" Style="{StaticResource ImgSource}"/>
+
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding Title}" Name="txtNameAgent"/>
+                                        <TextBlock Text="{Binding SellCount}" Name="txtSells" FontFamily="Comic Sans MS" FontSize="15"/>
+                                        <TextBlock Text="{Binding Phone}" Name="txtPhone" FontFamily="Comic Sans MS" FontSize="12"/>
+                                        <TextBlock Text="{Binding Priority}" Name="txtPriority" FontFamily="Comic Sans MS" FontSize="12"/>
+
+                                    </StackPanel>
+                                </StackPanel>
+                            </ListBoxItem>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

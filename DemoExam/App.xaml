@@ -4,8 +4,55 @@
              xmlns:local="clr-namespace:DemoExam"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style>
-            <Setter Property="Binding."></Setter>
+        <Style x:Key="fontStyle">
+            <Setter Property="ItemsControl.FontFamily" Value="Comic Sans MS"></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="175"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="#F9969E "/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style x:Key="lbTomato">
+            <Setter Property="ItemsControl.Foreground" Value="#F9969E"/>
+        </Style>
+        <Style TargetType="Image" x:Key="ImgSource">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="agentTxt">
+            
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="lbiBottomTxt">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="ListBoxItem" x:Key="LbITomato">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Agents}">
+                    
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="Title">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
     </Application.Resources>
 </Application>
