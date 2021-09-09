@@ -18,7 +18,7 @@ namespace DemoExam
     /// <summary>
     /// Логика взаимодействия для AllAgents.xaml
     /// </summary>
-    public partial class AllAgents : Window
+    public partial class AllAgents : Page
     {
         public AllAgents()
         {
@@ -27,6 +27,8 @@ namespace DemoExam
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += UpdateData;
             timer.Start();
+            cbFilter.Items.Add("По типу");
+            cbSort.Items.Add("от А до Я");
         }
 
         public void UpdateData(object sender, object e)

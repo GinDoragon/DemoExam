@@ -90,6 +90,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\AgentType.cs" />
     <Compile Include="Model\DB.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>ModelAgents.tt</DependentUpon>
@@ -179,6 +180,7 @@
       <LastGenOutput>ModelAgents.Context.cs</LastGenOutput>
       <DependentUpon>ModelAgents.edmx</DependentUpon>
     </Content>
+    <Content Include="ModelAgents.edmx.sql" />
     <Content Include="ModelAgents.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelAgents.edmx</DependentUpon>
